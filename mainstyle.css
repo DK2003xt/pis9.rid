@@ -1,0 +1,243 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ส่วนบริหารทั่วไป</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+        }
+        .container {
+          width: 1200px;
+          margin: 0 auto;
+          background: rgb(194, 201, 209);
+      }
+        .header {
+            height: 150px;
+      }
+
+.menu {
+  width: 230px;
+  color: white;
+  position: absolute;
+  top: 170px; 
+  left: 10;
+  padding: 0;
+  height: 100vh;
+  margin: 0;
+  z-index: 999;
+  overflow-y: right;       
+  transition: width 0.3s ease; 
+}
+
+
+.menu .menu-group {
+  margin-bottom: 0px;
+}
+
+.menu .menu-title {
+  background-color: #0d82dc;
+  padding: 10px 15px;
+  font-weight: bold;
+  border-bottom: 1px solid #d7ccc8;
+  color: white;
+  font-size: 14px; 
+}
+
+.menu .menu-item {
+  background-color: #8ccbfc;
+  padding: 6px 15px;
+  color: black;
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px solid #a1887f;
+  transition: background 0.2s ease;
+  font-size: 13px; 
+}
+
+.menu .menu-item:hover {
+  background-color: #bcaaa4;
+}
+
+.card {
+            background: #f1f1f1;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+.profile-card {
+          display: flex;
+          align-items: flex-start;
+          gap: 20px; 
+          padding: 15px;
+          margin: 30px 0 20px 220px; 
+          border-radius: 10px;
+          max-width: 1000px;
+      }
+      
+.profile-image {
+          width: 235px;
+          height: auto;
+          border-radius: 10px;
+          margin-top: -25px;
+          margin-left: 10px; 
+      }
+      
+.system-buttons {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          
+      }
+      
+.system-buttons.left {
+          margin-right: 23px; 
+          margin-top: -15px;
+      }
+      .system-buttons.left1 {
+        margin-right: -975px; 
+        margin-top: -15px;
+    }
+      
+.system-buttons.right {
+          margin-left: 10px; 
+          margin-top: 330px;
+      }
+</style>
+</head>
+<body>
+
+<div class="container">
+<div class="header" style="padding: 0; margin: 0;">
+  <img src="EC2.png" alt="โลโก้สำนักงานชลประทาน" 
+       style="width: 100%; max-width: 1200px; height: 165px; display: block; margin: 0 auto;">
+</div>
+
+<div class="main-layout">
+    
+          <div class="menu">
+          <div class="menu-group">
+                  
+            <a href="#" class="menu-title" style="display: block; text-decoration: none;">หน้าหลัก</a>
+            </div>
+              
+          <div class="menu-group">
+            <a href="#" class="menu-title" style="display: block; text-decoration: none;">ส่วนบริหารทั่วไป</a>
+                  <a href="#" class="menu-item">ฝ่ายธุรการ</a>
+                  <a href="#" class="menu-item">ฝ่ายบริหารบุคคลและสวัสดิการ</a>
+                  <a href="#" class="menu-item">ฝ่ายการเงินและบัญชี</a>
+                  <a href="#" class="menu-item">ฝ่ายพัสดุ</a>
+                  <a href="#" class="menu-item">ฝ่ายประชาสัมพันธ์และสารสนเทศ</a>
+                  </div>
+              
+ <div class="menu-group">
+         <a href="#" class="menu-title" style="display: block; text-decoration: none;">กรอบอัตรากำลัง</a>
+          
+              </div>
+              
+                  <div class="menu-group">
+                  <div class="menu-title">ข้อมูลบุคลากร</div>
+                  <a href="#" class="menu-item">ข้าราชการ</a>
+                  <a href="#" class="menu-item">ลูกจ้างประจำ</a>
+                  <a href="#" class="menu-item">พนักงานของรัฐ</a>
+                  </div>
+              
+<div class="menu-group">
+                  <a href="#" class="menu-title" style="display: block; text-decoration: none;">ข้อมูลการอบรม/ดูงาน/สัมมนา</a>
+                  </div>
+              
+<div class="menu-group">
+                  <div class="menu-title">คำสั่งกรมชลประทาน</div>
+                  <a href="#" class="menu-item">มอบหมายหน้าที่ข้าราชการ</a>
+                  </div>
+
+<div class="menu-group">
+                  <div class="menu-title">แผนผังเว็บไซต์</div>
+                  </div>
+                  </div>
+              
+<div class="profile-card">
+                  <img src="Blue Yellow Modern Geometric Page Border.jpg" alt="ผู้อำนวยการ" class="profile-image">
+                  <div class="profile-info"></div>
+<div class="system-buttons left">
+                  
+                    <a href="#">
+                        <img src="EE1.png" alt="ระบบสารบรรณอิเล็กทรอนิกส์" style="width: 310px; height: 60px;">
+                       </a>
+                    <a href="#">
+                        <img src="EE2.png" alt="ระบบ DPIS" style="width: 310px; height: 60px;">
+                       </a>
+                    <a href="#">
+                        <img src="EE3.png" alt="ระบบการจัดซื้อจัดจ้างภาครัฐ" style="width: 310px; height: 60px;">
+                      </a>
+                    <a href="#">
+                        <img src="EE4.png" alt="จัดซื้อจัดจ้าง กรมชลประทาน" style="width: 310px; height: 60px;">
+                      </a>
+                    </div>
+                    
+                    <div class="system-buttons left1">
+                  
+                      <a href="#">
+                          <img src="EE5.png" alt="ระบบจัดเก็บเอกสาร อิเล็กทรอนิกส์" style="width: 310px; height: 60px;">
+                         </a>
+                      <a href="#">
+                          <img src="EE6.png" alt="รกรมบัญชีกลาง" style="width: 310px; height: 60px;">
+                         </a>
+                      <a href="#">
+                          <img src="EE7.png" alt="GFMIS WEB ONLINE" style="width: 310px; height: 60px;">
+                        </a>
+                      <a href="#">
+                          <img src="EE8.png" alt="GFMIS Intranet loader" style="width: 310px; height: 60px;">
+                        </a>
+                      </div>
+                    
+<div class="system-buttons right">
+    <a href="#">
+    <img src="EE9.png" alt="ระบบฐานข้อมูลบุคลากร" style="width: 260px; height: 50px;">
+    </a>
+    
+    <a href="#">
+    <img src="EE10.png" alt="การปฏิบัติงาน การปฏิบัติงาน (EPP)" style="width: 260px; height: 50px;">
+    </a>
+                    
+    <a href="#">
+    <img src="EE11.png" alt="ระบบสารสนเทศ การจัดเก็บเอกสาร" style="width: 260px; height: 50px;">
+    </a>
+                    
+    <a href="#">
+    <img src="EE12.png" alt="หนังสือเวียน ระบบรับส่งเรื่อง" style="width: 260px; height: 50px;">
+    </a>
+                      
+    <a href="#">
+    <img src="EE13.png" alt="ระบบสารสนเทศเพื่อการบริหารงาน" style="width: 260px; height: 50px;">
+    </a>
+    </div>
+                    
+    <a href="#">
+    <img src="X.png" alt="ภาพเพิ่มเติม" style="width: 670px; height: 480px;  margin-top: 265px;">
+    </a>
+    </div>
+       <div style="margin: -30px 15px 20px 240px; padding: 16px; background: #ffffff; border: 2px solid #ccc; border-radius: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); line-height: 1.8;">
+            <strong>ส่วนบริหารทั่วไป</strong>  มีหน้าที่รับผิดชอบควบคุมตรวจสอบ กลั่นกรอง เพื่อปรับปรุงแก้ไขปัญหา อุปสรรคในการปฏิบัติงาน การรักษา
+                    ความปลอดภัย การบำรุงรักษา การใช้อาคารสถานที่ราชการ การประชาสัมพันธ์เผยแพร ผลงาน และกิจการของกรมชลประทานทางสื่อสาร
+                    มวลชน รวบรวมข้อมูลสารสนเทศ ดำเนินการด้านสวัสดิการต่างๆ ตรวจสอบการเบิกจ่ายเงิน การจัดทำบัญชีทั่วไปตามระบบบัญชีส่วนภูมิภาค
+                    การตรวจสอบลงทะเบียนหลักฐาน การจ่าย การควบคุมงบประมาณตามการอนุมัติเงินประจำงวด ของสำนักงบประมาณ โครงการชลประทาน
+                    โครงการ ส่งน้ำและบำรุงรักษาและงานฝาก การจัดทำงบเดือน เบิกจ่ายเงินงบประมาณส่งสำนักงานตรวจเงินแผ่นดินภูมิภาค ตรวจสอบ
+                    การจัดซื้อ/จัดจ้างในอำนาจของผู้อำนวยการสำนักชลประทาน และอำนาจหัวหน้าโครงการ การจัดทำบัญชี พัสดุ การจัดการด้านคลังพัสดุ
+                    การจำหน่ายพัสดุ  ให้มีประสิทธิภาพประสิทธิผล การบรรจุแต่งตั้ง โอนย้าย การลาออก บำเหน็จบำนาญ การพิจารณาความดีความชอบ
+                    และการพิจารณาสอบสวนวินัยของข้าราชการ ลูกจ้างประจำ และพนักงานราชการ การตรวจสอบการขอใช้ที่ราชพัสดุและการบุกรุก
+                    ที่ราชพัสดุ และงานนิติการอื่น ๆ ติดต่อประสานงานกับหน่วยงาน ที่เกี่ยวข้อง ตลอดจนปฏิบัติหน้าที่อื่น ๆ ตามที่ผู้บังคับบัญชามอบหมาย
+        </div>
+                  
+    <div style="background-color: #5ce7f9; padding: 25px 10px; text-align: center; font-size: 16px; font-weight: bold; position: relative;">
+          <img src="Logo Rid.png" alt="โลโก้ส่วนบริหารทั่วไป" style="height: 80px; position: absolute; left: 20px; top: 50%; transform: translateY(-50%);">
+                  
+        <div>
+        ส่วนบริหารทั่วไป สำนักงานชลประทานที่ 9 กรมชลประทาน กระทรวงเกษตรและสหกรณ์<br>
+        โทรศัพท์ : 038-341252-4 ต่อ 3311
+</div>
+</div>
+</body>
+</html

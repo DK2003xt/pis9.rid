@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="th">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ส่วนบริหารทั่วไป</title>
+        <style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    background: rgb(194, 201, 209);
+}
+.header {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+.header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 7px;
+    background-color: #509aee; /* เปลี่ยนสี */
+    box-shadow: 0 4px 6px -2px rgba(0,0,0,0.2);
+}
+.menu {
+    width: 230px;
+    color: white;
+    position: relative;
+    top: 5px;
+    left: 0px;
+    padding: 0;
+    height: auto;
+    margin: 0;
+    z-index: 999;
+    overflow: hidden;
+    transition: width 0.3s ease;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.menu .menu-group {
+    margin: 0;
+}
+.menu .menu-title {
+    background-color: #0d82dc;
+    padding: 10px 15px;
+    font-weight: bold;
+    border-bottom: 1px solid #d7ccc8;
+    color: white;
+    font-size: 14px;
+    margin: 0;
+}
+.menu .menu-item {
+    background-color: #8ccbfc;
+    padding: 10px 18px;
+    color: black;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #ffffff44;
+    transition: all 0.3s ease;
+    font-size: 13px;
+    border-radius: 0;
+}
+.menu .menu-item:hover {
+    background-color: #ffffff;
+    color: #0d82dc;
+    transform: translateX(5px); /* ขยับเมนู */
+    border-radius: 8px;
+    font-weight: bold;
+}
+.container {
+width: 1200px;
+}
+
+</style>
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="header" style="padding: 0; margin left: 0;">
+                <img src="photo/EC3.png" alt="โลโก้สำนักงานชลประทาน"
+                    style="width: 100%; max-width: 1200px; height: 165px; display: block; margin: 0 auto;">
+            </div>
+
+            <div class="main-layout">
+                <div class="menu">
+                    <div class="menu-group">
+                        <a href="index.html" class="menu-title"
+                            style="display: block; text-decoration: none;">หน้าหลัก</a>
+                    </div>
+                    <div class="menu-group">
+                        <a href="#" class="menu-title"
+                            style="display: block; text-decoration: none;">ส่วนบริหารทั่วไป</a>
+                        <a href="peple.html" class="menu-item">ฝ่ายธุรการ</a>
+                        <a href="peple2.html"
+                            class="menu-item">ฝ่ายบริหารบุคคลและสวัสดิการ</a>
+                        <a href="peple3.html"
+                            class="menu-item">ฝ่ายการเงินและบัญชี</a>
+                        <a href="peple4.html" class="menu-item">ฝ่ายพัสดุ</a>
+                        <a href="peple5.html"
+                            class="menu-item">ฝ่ายประชาสัมพันธ์และสารสนเทศ</a>
+                    </div>
+                    <div class="menu-group">
+                        <a href="#" class="menu-title"
+                            style="display: block; text-decoration: none;">กรอบอัตรากำลัง</a>
+                    </div>
+                    <div class="menu-group">
+                        <div class="menu-title">ข้อมูลบุคลากร</div>
+                        <a href="#" class="menu-item">ข้าราชการ</a>
+                        <a href="#" class="menu-item">ลูกจ้างประจำ</a>
+                        <a href="#" class="menu-item">พนักงานของรัฐ</a>
+                    </div>
+                    <div class="menu-group">
+                        <a href="#" class="menu-title"
+                            style="display: block; text-decoration: none;">ข้อมูลการอบรม/ดูงาน/สัมมนา</a>
+                    </div>
+                    <div class="menu-group">
+                        <div class="menu-title">คำสั่งกรมชลประทาน</div>
+                        <a href="#"
+                            class="menu-item">มอบหมายหน้าที่ข้าราชการ</a>
+                    </div>
+
+                    <div class="menu-group">
+                        <div class="menu-title">แผนผังเว็บไซต์</div>
+                    </div>
+                </div>
+
+                <!-- ปฏิทินพร้อมนาฬิกา -->
+                <div style="position: relative;">
+                    <div id="calendar-container" style="
+position: absolute;
+bottom: -255px;
+left: 0;
+padding: -700px;
+background: #5ce7f9;
+border: 1px solid #ccc;
+border-radius: 10px;
+width: 230px;
+font-family: sans-serif;
+box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+
+                        <div id="calendar-header"
+                            style="text-align: center; font-weight: bold; font-size: 18px; margin-bottom: 5px;"></div>
+                        <div id="time-now"
+                            style="text-align: center; font-size: -100px; color: #000000; margin-bottom: 15px;">
+                        </div>
+
+                        <div
+                            style="display: grid; grid-template-columns: repeat(7, 1fr); text-align: center; font-weight: bold;">
+                            <div>อา</div><div>จ</div><div>อ</div><div>พ</div><div>พฤ</div><div>ศ</div><div>ส</div>
+                        </div>
+                        <div id="calendar-grid"
+                            style="display: grid; grid-template-columns: repeat(7, 1fr); text-align: center; margin-top: 5px; gap: 0px;"></div>
+                    </div>
+                </div>
+
+                <script>
+    function updateTime() {
+    const now = new Date();
+    const hours = now.getHours().toString().padStart(2, "0");
+    const minutes = now.getMinutes().toString().padStart(2, "0");
+    const seconds = now.getSeconds().toString().padStart(2, "0");
+    document.getElementById("time-now").textContent = `เวลา ${hours}:${minutes}:${seconds} น.`;
+    }
+  
+function generateCalendar() {
+    const now = new Date();
+    const thaiMonths = [
+    "มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน",
+    "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม"
+];
+    
+    const month = now.getMonth();
+    const year = now.getFullYear();
+    const thaiYear = year + 543;
+    
+    const firstDay = new Date(year, month, 1);
+    const lastDay = new Date(year, month + 1, 0);
+    
+    const startDay = firstDay.getDay(); // 0 = อาทิตย์
+    const totalDays = lastDay.getDate();
+    
+    const grid = document.getElementById("calendar-grid");
+    grid.innerHTML = "";
+    
+    document.getElementById("calendar-header").textContent = `${thaiMonths[month]} ${thaiYear}`;
+    
+    for (let i = 0; i < startDay; i++) {
+        grid.innerHTML += `<div></div>`;
+    }
+    
+    for (let i = 1; i <= totalDays; i++) {
+        const currentDate = new Date(year, month, i);
+        const dayOfWeek = currentDate.getDay();
+        const isToday = (i === now.getDate());
+    
+        // วันเสาร์-อาทิตย์ สีแดง
+        const color = (dayOfWeek === 0 || dayOfWeek === 6) ? 'color: red;' : '';
+    
+        grid.innerHTML += `<div style="padding: 6px; ${color} ${isToday ? 'background: #ffffff; border-radius: 50%; font-weight: bold;' : ''}">${i}</div>`;
+    }
+    }
+    generateCalendar();
+    updateTime();
+    setInterval(updateTime, 1000);
+</script>
+
+                <div class="profile-card">
+
+                    <div
+                        style="text-align: center; margin-top: 30px; margin-left: 100px;">
+
+                        <div style="
+    margin: -625px 15px 20px 160px;
+    padding: 20px;
+    background-image: url('photo/BP.jpg');
+    background-size: cover;
+    background-position: center;
+    border: 4px solid #4f97d2;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    line-height: 1.8;">
+                            <div style="text-align: center;">
+
+                                <div
+                                    style="background-color: #f979a6; display: inline-block; padding: 10px 30px; font-size: 22px; font-weight: bold; border-radius: 8px; margin-bottom: 20px;">
+                                    ฝ่ายพัสดุ
+                                </div>
+
+                                <!-- แถวที่ 1 -->
+                                <div style="margin-bottom: 30px;">
+                                    <img src="photo/O27.png" alt="ศิริธร"
+                                        style="width: 150px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"><br>
+                                    <div
+                                        style="background: rgba(255, 255, 255, 0.6); padding: 10px; border-radius: 8px; margin-top: 1px; border: 5px solid #2e9edf; width: 225px; margin: 0 auto;">
+                                        <div
+                                            style="font-weight: bold; color: rgb(0, 0, 0); ">นางพัชรินทร์
+                                            ชุมอุระ</div>
+                                        <div
+                                            style="color: rgb(0, 0, 0); ">นักวิชาการเงินและบัญชีชำนาญการ<br>หัวหน้าฝ่ายพัสดุ
+                                            (พด.ชป.9)</div>
+                                    </div>
+                                </div>
+                                <!-- แถวที่ 2 -->
+                                <div
+                                    style="display: flex; justify-content: center; gap: 80px; margin-bottom: 30px;">
+                                    <div style="text-align: center;">
+                                        <img src="photo/O28.png"
+                                            alt="เจ้าหน้าที่"
+                                            style="width: 130px; border-radius: 10px;"><br>
+                                        <div
+                                            style="background: #ffffff; padding: 10px; border-radius: 8px; margin-top: 1px; border: 5px solid #2e9edf; width: 164px; margin: 0 auto;">
+                                            <div
+                                                style="font-weight: bold; color: rgb(0, 0, 0); ">นางสาวนลิน
+                                                ไตรยราช </div>
+                                            <div
+                                                style="color: rgb(0, 0, 0); ">นักวิชาการพัสดุปฏิบัติการ</div>
+                                        </div>
+                                    </div>
+                                    <div style="text-align: center;">
+                                        <img src="photo/O29.png"
+                                            alt="เจ้าหน้าที่"
+                                            style="width: 130px; border-radius: 10px;"><br>
+                                        <div
+                                            style="background: #ffffff; padding: 10px; border-radius: 8px; margin-top: 1px; border: 5px solid #2e9edf; width: 183px; margin: 0 auto;">
+                                            <div
+                                                style="font-weight: bold; color: rgb(0, 0, 0); ">นางกอบกาญจน์
+                                                บุรีทอง</div>
+                                            <div
+                                                style="color: rgb(0, 0, 0); ">เจ้าพนักงานพัสดุชำนาญงาน</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- แถวที่ 3  -->
+                                <div
+                                    style="display: flex; justify-content: center; gap: 60px; margin-bottom: 30px; margin-left: 10px;">
+                                    <div style="text-align: center;">
+                                        <img src="photo/O30.png"
+                                            alt="เจ้าหน้าที่"
+                                            style="width: 130px; border-radius: 10px;"><br>
+                                        <div
+                                            style="background: #ffffff; padding: 10px; border-radius: 8px; margin-top: 1px; border: 5px solid #2e9edf; width: 128px; margin: 0 auto;">
+                                            <div
+                                                style="font-weight: bold; color: rgb(0, 0, 0); ">นางอัมพร
+                                                นิลสลับ</div>
+                                            <div
+                                                style="color: rgb(0, 0, 0); ">พนักงานพิมพ์
+                                                ส 4</div>
+                                        </div>
+                                    </div>
+                                    <div style="text-align: center;">
+                                        <img src="photo/O31.png"
+                                            alt="เจ้าหน้าที่"
+                                            style="width: 130px; border-radius: 10px;"><br>
+                                        <div
+                                            style="background: #ffffff; padding: 10px; border-radius: 8px; margin-top: 1px; border: 5px solid #2e9edf; width: 143px; margin: 0 auto;">
+                                            <div
+                                                style="font-weight: bold; color: rgb(0, 0, 0); ">นางมารศรี
+                                                พรหมศิริ</div>
+                                            <div
+                                                style="color: rgb(0, 0, 0); ">พนักงานพิมพ์
+                                                ส 4</div>
+                                        </div>
+                                    </div>
+                                    <div style="text-align: center;">
+                                        <img src="photo/O32.png"
+                                            alt="เจ้าหน้าที่"
+                                            style="width: 130px; border-radius: 10px;"><br>
+                                        <div
+                                            style="background: #ffffff; padding: 10px; border-radius: 8px; margin-top: 1px; border: 5px solid #2e9edf; width: 177px; margin: 0 auto;">
+                                            <div
+                                                style="font-weight: bold; color: rgb(0, 0, 0); ">นางมยุรา
+                                                เทพอารยางกูล</div>
+                                            <div
+                                                style="color: rgb(0, 0, 0); ">พนักงานพิมพ์
+                                                ส 4</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- แถวที่ 4  -->
+                                <div
+                                    style="display: flex; justify-content: center; gap: 60px; margin-bottom: 30px; margin-left: 10px;">
+                                    <div style="text-align: center;">
+                                        <img src="photo/O33.png"
+                                            alt="เจ้าหน้าที่"
+                                            style="width: 130px; border-radius: 10px;"><br>
+                                        <div
+                                            style="background: #ffffff; padding: 10px; border-radius: 8px; margin-top: 1px; border: 5px solid #2e9edf; width: 153px; margin: 0 auto;">
+                                            <div
+                                                style="font-weight: bold; color: rgb(0, 0, 0); ">นางสาวนพสร
+                                                จุลปาน</div>
+                                            <div
+                                                style="color: rgb(0, 0, 0); ">เจ้าพนักงานธุรการ</div>
+                                        </div>
+                                    </div>
+                                    <div style="text-align: center;">
+                                        <img src="photo/O34.png"
+                                            alt="เจ้าหน้าที่"
+                                            style="width: 130px; border-radius: 10px;"><br>
+                                        <div
+                                            style="background: #ffffff; padding: 10px; border-radius: 8px; margin-top: 1px; border: 5px solid #2e9edf; width: 144px; margin: 0 auto;">
+                                            <div
+                                                style="font-weight: bold; color: rgb(0, 0, 0); ">นางศิริวรรณ
+                                                พ่วงศรี</div>
+                                            <div
+                                                style="color: rgb(0, 0, 0); ">เจ้าหน้าที่ธุรการ</div>
+                                        </div>
+                                    </div>
+                                    <div style="text-align: center;">
+                                        <img src="photo/O35.png"
+                                            alt="เจ้าหน้าที่"
+                                            style="width: 130px; border-radius: 10px;"><br>
+                                        <div
+                                            style="background: #ffffff; padding: 10px; border-radius: 8px; margin-top: 1px; border: 5px solid #2e9edf; width: 151px; margin: 0 auto;">
+                                            <div
+                                                style="font-weight: bold; color: rgb(0, 0, 0); ">นางสาวยุพาวดี
+                                                คำศรี</div>
+                                            <div
+                                                style="color: rgb(0, 0, 0); ">เจ้าพนักงานธุรการ</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- แถวที่ 5  -->
+                                <div
+                                    style="display: flex; justify-content: center; gap: 60px; margin-bottom: 30px; margin-left: 10px;">
+                                    <div style="text-align: center;">
+                                        <img src="photo/O36.png"
+                                            alt="เจ้าหน้าที่"
+                                            style="width: 130px; border-radius: 10px;"><br>
+                                        <div
+                                            style="background: #ffffff; padding: 10px; border-radius: 8px; margin-top: 1px; border: 5px solid #2e9edf; width: 170px; margin: 0 auto;">
+                                            <div
+                                                style="font-weight: bold; color: rgb(0, 0, 0); ">นางสาวธณัตชากร
+                                                มีชัย</div>
+                                            <div
+                                                style="color: rgb(0, 0, 0); ">พนักงานทั่วไป</div>
+                                        </div>
+                                    </div>
+                                    <div style="text-align: center;">
+                                        <img src="photo/O37.png"
+                                            alt="เจ้าหน้าที่"
+                                            style="width: 130px; border-radius: 10px;"><br>
+                                        <div
+                                            style="background: #ffffff; padding: 10px; border-radius: 8px; margin-top: 1px; border: 5px solid #2e9edf; width: 202px; margin: 0 auto;">
+                                            <div
+                                                style="font-weight: bold; color: rgb(0, 0, 0); ">นางสาวภัควลัญชญ์
+                                                วิวาห์สุข</div>
+                                            <div
+                                                style="color: rgb(0, 0, 0); ">พนักงานทั่วไป</div>
+                                        </div>
+                                    </div>
+                                    <div style="text-align: center;">
+                                        <img src="photo/O38.png"
+                                            alt="เจ้าหน้าที่"
+                                            style="width: 130px; border-radius: 10px;"><br>
+                                        <div
+                                            style="background: #ffffff; padding: 10px; border-radius: 8px; margin-top: 1px; border: 5px solid #2e9edf; width: 188px; margin: 0 auto;">
+                                            <div
+                                                style="font-weight: bold; color: rgb(0, 0, 0); ">นางสาวศิริรัตน์
+                                                เสงี่ยมจิตต์</div>
+                                            <div
+                                                style="color: rgb(0, 0, 0); ">พนักงานทั่วไป</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- แถวที่ 6  -->
+                                <div
+                                    style="display: flex; justify-content: center; gap: 60px; margin-bottom: 30px; margin-left: 10px;">
+                                    <div style="text-align: center;">
+                                        <img src="photo/O39.png"
+                                            alt="เจ้าหน้าที่"
+                                            style="width: 130px; border-radius: 10px;"><br>
+                                        <div
+                                            style="background: #ffffff; padding: 10px; border-radius: 8px; margin-top: 1px; border: 5px solid #2e9edf; width: 167px; margin: 0 auto;">
+                                            <div
+                                                style="font-weight: bold; color: rgb(0, 0, 0); ">นายภานุพงษ์
+                                                มนต์วิเศษ</div>
+                                            <div
+                                                style="color: rgb(0, 0, 0); ">พนักงานทั่วไป</div>
+                                        </div>
+                                    </div>
+                                    <div style="text-align: center;">
+                                        <img src="photo/O40.png"
+                                            alt="เจ้าหน้าที่"
+                                            style="width: 130px; border-radius: 10px;"><br>
+                                        <div
+                                            style="background: #ffffff; padding: 10px; border-radius: 8px; margin-top: 1px; border: 5px solid #2e9edf; width: 163px; margin: 0 auto;">
+                                            <div
+                                                style="font-weight: bold; color: rgb(0, 0, 0); ">นายปรมัตถ์
+                                                ณรงค์ฤทธิ์</div>
+                                            <div
+                                                style="color: rgb(0, 0, 0); ">พนักงานทั่วไป</div>
+                                        </div>
+                                    </div>
+                                    <div style="text-align: center;">
+                                        <img src="photo/O41.png"
+                                            alt="เจ้าหน้าที่"
+                                            style="width: 130px; border-radius: 10px;"><br>
+                                        <div
+                                            style="background: #ffffff; padding: 10px; border-radius: 8px; margin-top: 1px; border: 5px solid #2e9edf; width: 148px; margin: 0 auto;">
+                                            <div
+                                                style="font-weight: bold; color: rgb(0, 0, 0); ">นายวัลลภ
+                                                เพิ่มทรัพย์</div>
+                                            <div
+                                                style="color: rgb(0, 0, 0); ">พนักงานทั่วไป</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ปุ่มหน้าหลัก -->
+                                <div
+                                    style="display: flex; justify-content: center; gap: 80px; margin-bottom: -30px;">
+                                    <div style="text-align: center;">
+                                        <a href="index.html">
+                                            <img src="Icon/Home 1.png"
+                                                alt="Home Button"
+                                                style="width: 200px; border-radius: 10px;"><br>
+                                        </a>
+
+                                        <!-- รูปภาพซ้าย  -->
+                                        <div
+                                            style="width: 1000px; margin: 0 auto; position: relative;">
+                                            <!-- รูปภาพอยู่ในตำแหน่งแน่นอน  -->
+                                            <div
+                                                style="position: absolute; top: -2079px; left: 60px;">
+                                                <img src="Icon/Logo Rid.png"
+                                                    alt="Home Button"
+                                                    style="width: 80px; border-radius: 10px;">
+                                            </div>
+                                            <!-- รูปอยู๋กลาง-->
+                                            <div
+                                                style="display: flex; justify-content: center; gap: 80px; margin-bottom: 3px;">
+                                                <!-- ... content ... -->
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="background-color: #5ce7f9; padding: 10px 20px;">
+                    <div
+                        style="display: flex;align-items: center;justify-content: center;flex-wrap: wrap;">
+
+                        <!-- โลโก้ด้านซ้าย -->
+                        <div style="flex: 0 0 auto; margin-right: 20px;">
+                            <img src="Icon/Logo Rid.png"
+                                alt="โลโก้ส่วนบริหารทั่วไป"
+                                style="height: 80px;">
+                        </div>
+
+                        <!-- กล่องห่อข้อความให้จัดกลาง -->
+                        <div
+                            style="flex: 1;display: flex;align-items: center;justify-content: center;">
+
+                            <!-- ข้อความตรงกลาง -->
+                            <div
+                                style="text-align: center; font-size: 16px; font-weight: bold;">
+                                ส่วนบริหารทั่วไป สำนักงานชลประทานที่ 9
+                                กรมชลประทาน กระทรวงเกษตรและสหกรณ์<br>
+                                โทรศัพท์ : 038-341252-4 ต่อ 3311
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </body>
+            </html
